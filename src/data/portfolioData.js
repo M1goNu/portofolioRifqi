@@ -1,10 +1,12 @@
+const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 export const profile = {
   name: "Rifqi Aldino Amin",
   tagline: "Software Developer & Game Developer",
   shortDescription:
     "Enthusiastic developer with experience in web, mobile, and game development. I create interactive experiences using React Native and Unity, including VR applications and gameplay systems.",
   location: "Tangerang, Indonesia",
-  photoUrl: "/photo.jpeg",
+  photoUrl: withBase("/photo.jpeg"),
 };
 
 export const about = {
@@ -48,32 +50,32 @@ export const certificates = [
     issuer: "Sololearn",
     year: "2025",
     color: "var(--cn-cyan)",
-    logo: "/sololearn.png",
-    file: "/certificates/introduction-to-python.png"
+    logo: withBase("/sololearn.png"),
+    file: withBase("/certificates/introduction-to-python.png")
   },
   {
     title: "Python Intermediate",
     issuer: "Sololearn",
     year: "2025",
     color: "var(--cn-pink)",
-    logo: "/sololearn.png",
-    file: "/certificates/python-intermediate.png"
+    logo: withBase("/sololearn.png"),
+    file: withBase("/certificates/python-intermediate.png")
   },
   {
     title: "Python Developer",
     issuer: "Sololearn",
     year: "2025",
     color: "var(--cn-purple)",
-    logo: "/sololearn.png",
-    file: "/certificates/python-developer.png"
+    logo: withBase("/sololearn.png"),
+    file: withBase("/certificates/python-developer.png")
   },
   {
     title: "Huawei Talent HCIA-AI V3.5 Course",
     issuer: "Huawei",
     year: "2025",
     color: "var(--cn-blue)",
-    logo: "/huawei-hcia.png",
-    file: "/certificates/huawei-hcia-ai.png"
+    logo: withBase("/huawei-hcia.png"),
+    file: withBase("/certificates/huawei-hcia-ai.png")
   },
 ];
 
@@ -103,23 +105,23 @@ export const projects = [
     link: null,
     photos: [
       {
-        src: "/Ufound/cropped/02_UserHomeDashboardProfile_1.png",
+        src: withBase("/Ufound/cropped/02_UserHomeDashboardProfile_1.png"),
         label: "User Dashboard",
       },
       {
-        src: "/Ufound/03_ReportLostAnItem_1.png",
+        src: withBase("/Ufound/03_ReportLostAnItem_1.png"),
         label: "Report Item Feature",
       },
       {
-        src: "/Ufound/cropped/03_ReportLostAnItem_3.png",
+        src: withBase("/Ufound/cropped/03_ReportLostAnItem_3.png"),
         label: "Report Item Feature",
       },
       {
-        src: "/Ufound/cropped/05_AdminHomeDashboardProfile_1.png",
+        src: withBase("/Ufound/cropped/05_AdminHomeDashboardProfile_1.png"),
         label: "Admin Panel",
       },
       {
-        src: "/Ufound/cropped/06_AdminAcceptRejectReportPage_1.png",
+        src: withBase("/Ufound/cropped/06_AdminAcceptRejectReportPage_1.png"),
         label: "Admin Panel · Review Reports",
       },
     ],
@@ -133,23 +135,23 @@ export const projects = [
     link: null,
     photos: [
       {
-        src: "/TamanBacaan/03_HomeScreen.png",
+        src: withBase("/TamanBacaan/03_HomeScreen.png"),
         label: "Home Screen",
       },
       {
-        src: "/TamanBacaan/05_BookDetail.png",
+        src: withBase("/TamanBacaan/05_BookDetail.png"),
         label: "Book Detail",
       },
       {
-        src: "/TamanBacaan/04_SearchScreen.png",
+        src: withBase("/TamanBacaan/04_SearchScreen.png"),
         label: "Search Screen",
       },
       {
-        src: "/TamanBacaan/06_MyLibraryTab.png",
+        src: withBase("/TamanBacaan/06_MyLibraryTab.png"),
         label: "My Library Tab",
       },
       {
-        src: "/TamanBacaan/08_AdminBookManagement_2.png",
+        src: withBase("/TamanBacaan/08_AdminBookManagement_2.png"),
         label: "Admin Book Management",
       },
     ],
