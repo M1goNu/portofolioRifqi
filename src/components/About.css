@@ -1,0 +1,65 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 28px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.about__panel {
+  padding: 30px 32px;
+}
+
+.about__paragraph {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.about__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.about__skills {
+  background: var(--cn-purple);
+  border: var(--outline) solid var(--cn-ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-comic);
+  padding: 26px;
+  transform: rotate(1.5deg);
+}
+
+.about__skills-label {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  color: var(--cn-yellow);
+  margin-bottom: 14px;
+}
+
+.about__skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about__skill-chip {
+  background: var(--cn-white);
+  border: 2px solid var(--cn-ink);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 3px 3px 0 var(--cn-ink);
+}
+
+@media (max-width: 760px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about__skills {
+    transform: none;
+  }
+}

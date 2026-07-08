@@ -1,0 +1,98 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--cn-cream);
+  border-bottom: var(--outline) solid transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar--scrolled {
+  border-bottom-color: var(--cn-ink);
+  box-shadow: 0 4px 0 rgba(22, 22, 29, 0.08);
+}
+
+.navbar__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__badge {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: var(--cn-ink);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar__badge-star {
+  color: var(--cn-orange);
+  transform: rotate(-8deg);
+  display: inline-block;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 26px;
+}
+
+.navbar__links a {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: var(--cn-ink);
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.navbar__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--cn-orange);
+  transition: width 0.18s ease;
+}
+
+.navbar__links a:hover::after {
+  width: 100%;
+}
+
+.navbar__toggle {
+  display: none;
+  border: var(--outline) solid var(--cn-ink);
+  background: var(--cn-yellow);
+  border-radius: 10px;
+  box-shadow: var(--shadow-comic-sm);
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.navbar__links--mobile {
+  flex-direction: column;
+  padding: 6px 24px 18px;
+  gap: 14px;
+}
+
+@media (max-width: 720px) {
+  .navbar__links--desktop {
+    display: none;
+  }
+  .navbar__toggle {
+    display: block;
+  }
+}
