@@ -1,4 +1,13 @@
-const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+// Helper: make every image path aware of Vite's "base" config (needed for GitHub Pages,
+// which serves the site from https://M1goNu.github.io/portofolioRifqi/ instead of the domain root).
+// Guards against BASE_URL missing a trailing slash (e.g. "/portofolioRifqi" instead of "/portofolioRifqi/"),
+// which would otherwise glue the base and the filename together with no separator.
+const withBase = (path) => {
+  const base = import.meta.env.BASE_URL.endsWith("/")
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`;
+  return `${base}${path.replace(/^\//, "")}`;
+};
 
 export const profile = {
   name: "Rifqi Aldino Amin",
