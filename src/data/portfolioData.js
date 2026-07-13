@@ -44,7 +44,7 @@ export const education = [
     title: "Bachelor of Informatics",
     place: "Universitas Multimedia Nusantara",
     description:
-      "GPA 3.63/4.00. Built a strong foundation in software engineering through hands-on projects, focusing on web and mobile development, as well as interactive game and VR applications using Unity.",
+      "GPA 3.65/4.00. Built a strong foundation in software engineering through hands-on projects, focusing on web and mobile development, as well as interactive game and VR applications using Unity.",
   },
   {
     period: "2019 — 2022",
