@@ -61,7 +61,6 @@ function ProjectModal({ project, onClose }) {
             <>
               <div className="phone-mockup">
                 <div className="phone-mockup__screen">
-                  <div className="phone-mockup__notch" />
                   <img
                     src={activePhoto.src}
                     alt={

@@ -24,6 +24,8 @@ export const about = {
   ],
   skills: [
      "SQL", 
+     "MongoDB",
+     "Supabase",
      "Python", 
      "C#", 
      "TypeScript", 
