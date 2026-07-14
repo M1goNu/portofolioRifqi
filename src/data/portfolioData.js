@@ -1,7 +1,3 @@
-// Helper: make every image path aware of Vite's "base" config (needed for GitHub Pages,
-// which serves the site from https://M1goNu.github.io/portofolioRifqi/ instead of the domain root).
-// Guards against BASE_URL missing a trailing slash (e.g. "/portofolioRifqi" instead of "/portofolioRifqi/"),
-// which would otherwise glue the base and the filename together with no separator.
 const withBase = (path) => {
   const base = import.meta.env.BASE_URL.endsWith("/")
     ? import.meta.env.BASE_URL
@@ -11,29 +7,32 @@ const withBase = (path) => {
 
 export const profile = {
   name: "Rifqi Aldino Amin",
-  tagline: "Software Developer & Game Developer",
+  tagline: "Software Developer & Data Analyst",
   shortDescription:
-    "Enthusiastic developer with experience in web, mobile, and game development. I create interactive experiences using React Native and Unity, including VR applications and gameplay systems.",
+    "Enthusiastic developer and analyst with experience across web, mobile, game development, and data analysis. I build interactive experiences using React Native and Unity, and turn raw data into actionable insight using SQL, Python, and machine learning.",
   location: "Tangerang, Indonesia",
   photoUrl: withBase("/photo.jpeg"),
 };
 
 export const about = {
   paragraphs: [
-    "Informatics undergraduate student with a solid understanding of SQL, Python, Kotlin, C#, TypeScript, and JavaScript. Experienced in organizational activities as a logistics division member, developing teamwork, coordination, and problem-solving skills. Interested in software engineering, data analysis, and game development, with a strong commitment to learning new technologies and eager to apply technical knowledge in real-world projects."
+    "Informatics undergraduate student with hands-on experience in SQL-based data modeling, statistical analysis, and machine learning for business insight generation, alongside solid software development skills in Python, Kotlin, C#, TypeScript, and JavaScript. Experienced in organizational activities as a logistics division member, developing teamwork, coordination, and problem-solving skills. Committed to learning new technologies and eager to apply both analytical and technical knowledge in real-world projects."
   ],
   skills: [
-     "SQL", 
+     "SQL",
+     "Python (Pandas, Scikit-learn)",
+     "Data Modeling",
+     "Statistical Analysis",
+     "Machine Learning",
      "MongoDB",
      "Supabase",
-     "Python", 
-     "C#", 
-     "TypeScript", 
-     "JavaScript", 
-     "HTML", 
-     "CSS", 
-     "Kotlin", 
-     "Git & Version Control Basics", 
+     "C#",
+     "TypeScript",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "Kotlin",
+     "Git & Version Control Basics",
      "Unity"
   ],
 };
@@ -91,6 +90,32 @@ export const certificates = [
 ];
 
 export const projects = [
+  {
+    title: "Amazon Sales Prediction",
+    tag: "Data Analysis · Machine Learning",
+    description:
+      "Analyzed 200K+ Amazon product records to identify the key drivers of e-commerce sales performance, comparing Linear Regression, Random Forest, and XGBoost.",
+    stack: ["Python", "Pandas", "Scikit-learn", "XGBoost"],
+    link: null,
+    highlights: [
+      "Compared linear (Linear Regression) vs non-linear models (Random Forest, XGBoost) to predict product purchase volume, reaching an R² of 0.99 with the best model.",
+      "Found that review activity (review_velocity, total_reviews) and sponsorship status (is_sponsored) were far stronger predictors of sales than price or discount.",
+      "Business implication: sellers may gain more from driving product reviews and sponsored placement than from price-based promotions alone.",
+    ],
+  },
+  {
+    title: "Supermarket Data Model",
+    tag: "SQL · Data Modeling",
+    description:
+      "Designed a relational database schema for retail operations — customers, transactions, products, and suppliers — with analytical queries for sales and workforce reporting.",
+    stack: ["SQL", "MySQL", "Data Modeling"],
+    link: null,
+    highlights: [
+      "Modeled a normalized schema linking customers, transactions, products, and suppliers to support sales and inventory reporting.",
+      "Wrote analytical queries and views (e.g. total salary by position, product revenue) to summarize business performance by category and employee.",
+      "Implemented stored procedures and triggers to automate stock updates and revenue calculation after each transaction, keeping reporting data consistent.",
+    ],
+  },
   {
     title: "Pick it Up",
     tag: "Unity · XR Toolkit",

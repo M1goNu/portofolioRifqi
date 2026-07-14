@@ -3,8 +3,6 @@ import { projects } from "../data/portfolioData";
 import "./Certificates.css";
 import "./Projects.css";
 
-// Normalizes a photo entry into { src, label } whether the data is a plain
-// path string (legacy) or an object with an explicit label.
 function normalizePhoto(photo) {
   return typeof photo === "string" ? { src: photo, label: null } : photo;
 }
@@ -96,6 +94,14 @@ function ProjectModal({ project, onClose }) {
                 </div>
               )}
             </>
+          ) : project.highlights && project.highlights.length > 0 ? (
+            <ul className="projects__highlights">
+              {project.highlights.map((h, i) => (
+                <li key={i} className="projects__highlight-item">
+                  {h}
+                </li>
+              ))}
+            </ul>
           ) : (
             <p className="cert-modal__empty">
               Preview photos not yet added for this project.
@@ -153,7 +159,9 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            {project.photos && project.photos.length > 0 ? (
+            {(project.photos && project.photos.length > 0) ||
+            (project.highlights && project.highlights.length > 0) ||
+            !project.link ? (
               <button
                 type="button"
                 className="projects__link"

@@ -232,6 +232,30 @@
   box-shadow: var(--shadow-comic-sm);
 }
 
+.projects__highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.projects__highlight-item {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.projects__highlight-item::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--cn-cyan, #2fd8e0);
+}
+
 .projects__modal-desc {
   font-size: 0.92rem;
   line-height: 1.5;
